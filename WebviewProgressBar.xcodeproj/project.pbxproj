@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		609074851CE3032B001F92E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 609074841CE3032B001F92E3 /* main.m */; };
+		609074881CE3032B001F92E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609074871CE3032B001F92E3 /* AppDelegate.m */; };
+		6090748B1CE3032B001F92E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6090748A1CE3032B001F92E3 /* ViewController.m */; };
+		6090748E1CE3032B001F92E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6090748C1CE3032B001F92E3 /* Main.storyboard */; };
+		609074901CE3032B001F92E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6090748F1CE3032B001F92E3 /* Assets.xcassets */; };
+		609074931CE3032B001F92E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 609074911CE3032B001F92E3 /* LaunchScreen.storyboard */; };
+		6090749E1CE3032B001F92E3 /* WebviewProgressBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6090749D1CE3032B001F92E3 /* WebviewProgressBarTests.m */; };
+		609074A91CE3032B001F92E3 /* WebviewProgressBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609074A81CE3032B001F92E3 /* WebviewProgressBarUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6090749A1CE3032B001F92E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 609074781CE3032A001F92E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6090747F1CE3032A001F92E3;
+			remoteInfo = WebviewProgressBar;
+		};
+		609074A51CE3032B001F92E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 609074781CE3032A001F92E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6090747F1CE3032A001F92E3;
+			remoteInfo = WebviewProgressBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		609074801CE3032A001F92E3 /* WebviewProgressBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebviewProgressBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		609074841CE3032B001F92E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		609074861CE3032B001F92E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		609074871CE3032B001F92E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		609074891CE3032B001F92E3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6090748A1CE3032B001F92E3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6090748D1CE3032B001F92E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6090748F1CE3032B001F92E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		609074921CE3032B001F92E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		609074941CE3032B001F92E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		609074991CE3032B001F92E3 /* WebviewProgressBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebviewProgressBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6090749D1CE3032B001F92E3 /* WebviewProgressBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebviewProgressBarTests.m; sourceTree = "<group>"; };
+		6090749F1CE3032B001F92E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		609074A41CE3032B001F92E3 /* WebviewProgressBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebviewProgressBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		609074A81CE3032B001F92E3 /* WebviewProgressBarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebviewProgressBarUITests.m; sourceTree = "<group>"; };
+		609074AA1CE3032B001F92E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6090747D1CE3032A001F92E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		609074961CE3032B001F92E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		609074A11CE3032B001F92E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		609074771CE3032A001F92E3 = {
+			isa = PBXGroup;
+			children = (
+				609074821CE3032B001F92E3 /* WebviewProgressBar */,
+				6090749C1CE3032B001F92E3 /* WebviewProgressBarTests */,
+				609074A71CE3032B001F92E3 /* WebviewProgressBarUITests */,
+				609074811CE3032A001F92E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		609074811CE3032A001F92E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				609074801CE3032A001F92E3 /* WebviewProgressBar.app */,
+				609074991CE3032B001F92E3 /* WebviewProgressBarTests.xctest */,
+				609074A41CE3032B001F92E3 /* WebviewProgressBarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		609074821CE3032B001F92E3 /* WebviewProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				609074861CE3032B001F92E3 /* AppDelegate.h */,
+				609074871CE3032B001F92E3 /* AppDelegate.m */,
+				609074891CE3032B001F92E3 /* ViewController.h */,
+				6090748A1CE3032B001F92E3 /* ViewController.m */,
+				6090748C1CE3032B001F92E3 /* Main.storyboard */,
+				6090748F1CE3032B001F92E3 /* Assets.xcassets */,
+				609074911CE3032B001F92E3 /* LaunchScreen.storyboard */,
+				609074941CE3032B001F92E3 /* Info.plist */,
+				609074831CE3032B001F92E3 /* Supporting Files */,
+			);
+			path = WebviewProgressBar;
+			sourceTree = "<group>";
+		};
+		609074831CE3032B001F92E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				609074841CE3032B001F92E3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6090749C1CE3032B001F92E3 /* WebviewProgressBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				6090749D1CE3032B001F92E3 /* WebviewProgressBarTests.m */,
+				6090749F1CE3032B001F92E3 /* Info.plist */,
+			);
+			path = WebviewProgressBarTests;
+			sourceTree = "<group>";
+		};
+		609074A71CE3032B001F92E3 /* WebviewProgressBarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				609074A81CE3032B001F92E3 /* WebviewProgressBarUITests.m */,
+				609074AA1CE3032B001F92E3 /* Info.plist */,
+			);
+			path = WebviewProgressBarUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6090747F1CE3032A001F92E3 /* WebviewProgressBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 609074AD1CE3032B001F92E3 /* Build configuration list for PBXNativeTarget "WebviewProgressBar" */;
+			buildPhases = (
+				6090747C1CE3032A001F92E3 /* Sources */,
+				6090747D1CE3032A001F92E3 /* Frameworks */,
+				6090747E1CE3032A001F92E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebviewProgressBar;
+			productName = WebviewProgressBar;
+			productReference = 609074801CE3032A001F92E3 /* WebviewProgressBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		609074981CE3032B001F92E3 /* WebviewProgressBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 609074B01CE3032B001F92E3 /* Build configuration list for PBXNativeTarget "WebviewProgressBarTests" */;
+			buildPhases = (
+				609074951CE3032B001F92E3 /* Sources */,
+				609074961CE3032B001F92E3 /* Frameworks */,
+				609074971CE3032B001F92E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6090749B1CE3032B001F92E3 /* PBXTargetDependency */,
+			);
+			name = WebviewProgressBarTests;
+			productName = WebviewProgressBarTests;
+			productReference = 609074991CE3032B001F92E3 /* WebviewProgressBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		609074A31CE3032B001F92E3 /* WebviewProgressBarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 609074B31CE3032B001F92E3 /* Build configuration list for PBXNativeTarget "WebviewProgressBarUITests" */;
+			buildPhases = (
+				609074A01CE3032B001F92E3 /* Sources */,
+				609074A11CE3032B001F92E3 /* Frameworks */,
+				609074A21CE3032B001F92E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				609074A61CE3032B001F92E3 /* PBXTargetDependency */,
+			);
+			name = WebviewProgressBarUITests;
+			productName = WebviewProgressBarUITests;
+			productReference = 609074A41CE3032B001F92E3 /* WebviewProgressBarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		609074781CE3032A001F92E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Zhiqiang Deng";
+				TargetAttributes = {
+					6090747F1CE3032A001F92E3 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					609074981CE3032B001F92E3 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 6090747F1CE3032A001F92E3;
+					};
+					609074A31CE3032B001F92E3 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 6090747F1CE3032A001F92E3;
+					};
+				};
+			};
+			buildConfigurationList = 6090747B1CE3032A001F92E3 /* Build configuration list for PBXProject "WebviewProgressBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 609074771CE3032A001F92E3;
+			productRefGroup = 609074811CE3032A001F92E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6090747F1CE3032A001F92E3 /* WebviewProgressBar */,
+				609074981CE3032B001F92E3 /* WebviewProgressBarTests */,
+				609074A31CE3032B001F92E3 /* WebviewProgressBarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6090747E1CE3032A001F92E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				609074931CE3032B001F92E3 /* LaunchScreen.storyboard in Resources */,
+				609074901CE3032B001F92E3 /* Assets.xcassets in Resources */,
+				6090748E1CE3032B001F92E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		609074971CE3032B001F92E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		609074A21CE3032B001F92E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6090747C1CE3032A001F92E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6090748B1CE3032B001F92E3 /* ViewController.m in Sources */,
+				609074881CE3032B001F92E3 /* AppDelegate.m in Sources */,
+				609074851CE3032B001F92E3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		609074951CE3032B001F92E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6090749E1CE3032B001F92E3 /* WebviewProgressBarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		609074A01CE3032B001F92E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				609074A91CE3032B001F92E3 /* WebviewProgressBarUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6090749B1CE3032B001F92E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6090747F1CE3032A001F92E3 /* WebviewProgressBar */;
+			targetProxy = 6090749A1CE3032B001F92E3 /* PBXContainerItemProxy */;
+		};
+		609074A61CE3032B001F92E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6090747F1CE3032A001F92E3 /* WebviewProgressBar */;
+			targetProxy = 609074A51CE3032B001F92E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6090748C1CE3032B001F92E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6090748D1CE3032B001F92E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		609074911CE3032B001F92E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				609074921CE3032B001F92E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		609074AB1CE3032B001F92E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		609074AC1CE3032B001F92E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		609074AE1CE3032B001F92E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WebviewProgressBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.blogof.ios.WebviewProgressBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		609074AF1CE3032B001F92E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WebviewProgressBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.blogof.ios.WebviewProgressBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		609074B11CE3032B001F92E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WebviewProgressBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.blogof.ios.WebviewProgressBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebviewProgressBar.app/WebviewProgressBar";
+			};
+			name = Debug;
+		};
+		609074B21CE3032B001F92E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WebviewProgressBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.blogof.ios.WebviewProgressBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebviewProgressBar.app/WebviewProgressBar";
+			};
+			name = Release;
+		};
+		609074B41CE3032B001F92E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WebviewProgressBarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.blogof.ios.WebviewProgressBarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WebviewProgressBar;
+			};
+			name = Debug;
+		};
+		609074B51CE3032B001F92E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WebviewProgressBarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.blogof.ios.WebviewProgressBarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WebviewProgressBar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6090747B1CE3032A001F92E3 /* Build configuration list for PBXProject "WebviewProgressBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				609074AB1CE3032B001F92E3 /* Debug */,
+				609074AC1CE3032B001F92E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		609074AD1CE3032B001F92E3 /* Build configuration list for PBXNativeTarget "WebviewProgressBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				609074AE1CE3032B001F92E3 /* Debug */,
+				609074AF1CE3032B001F92E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		609074B01CE3032B001F92E3 /* Build configuration list for PBXNativeTarget "WebviewProgressBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				609074B11CE3032B001F92E3 /* Debug */,
+				609074B21CE3032B001F92E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		609074B31CE3032B001F92E3 /* Build configuration list for PBXNativeTarget "WebviewProgressBarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				609074B41CE3032B001F92E3 /* Debug */,
+				609074B51CE3032B001F92E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 609074781CE3032A001F92E3 /* Project object */;
+}
