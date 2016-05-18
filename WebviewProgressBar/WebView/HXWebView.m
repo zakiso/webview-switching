@@ -16,8 +16,6 @@
 @property (nonatomic,strong) NSURLRequest *currentRequest;
 @property (nonatomic,assign) BOOL useUIWebView;
 
-@property (nonatomic, copy) NSString *title;
-
 @end
 
 @implementation HXWebView
