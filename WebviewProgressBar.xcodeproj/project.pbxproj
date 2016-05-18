@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60906A951CEC15FF00ACBA2D /* HXWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60906A921CEC15FF00ACBA2D /* HXWebView.m */; };
+		60906A961CEC15FF00ACBA2D /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 60906A941CEC15FF00ACBA2D /* NJKWebViewProgress.m */; };
 		609074851CE3032B001F92E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 609074841CE3032B001F92E3 /* main.m */; };
 		609074881CE3032B001F92E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 609074871CE3032B001F92E3 /* AppDelegate.m */; };
 		6090748B1CE3032B001F92E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6090748A1CE3032B001F92E3 /* ViewController.m */; };
@@ -15,6 +17,7 @@
 		609074931CE3032B001F92E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 609074911CE3032B001F92E3 /* LaunchScreen.storyboard */; };
 		6090749E1CE3032B001F92E3 /* WebviewProgressBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6090749D1CE3032B001F92E3 /* WebviewProgressBarTests.m */; };
 		609074A91CE3032B001F92E3 /* WebviewProgressBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609074A81CE3032B001F92E3 /* WebviewProgressBarUITests.m */; };
+		609074BF1CE432D7001F92E3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609074BE1CE432D7001F92E3 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60906A911CEC15FF00ACBA2D /* HXWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXWebView.h; path = WebView/HXWebView.h; sourceTree = "<group>"; };
+		60906A921CEC15FF00ACBA2D /* HXWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXWebView.m; path = WebView/HXWebView.m; sourceTree = "<group>"; };
+		60906A931CEC15FF00ACBA2D /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NJKWebViewProgress.h; path = WebView/NJKWebViewProgress.h; sourceTree = "<group>"; };
+		60906A941CEC15FF00ACBA2D /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NJKWebViewProgress.m; path = WebView/NJKWebViewProgress.m; sourceTree = "<group>"; };
 		609074801CE3032A001F92E3 /* WebviewProgressBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebviewProgressBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		609074841CE3032B001F92E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		609074861CE3032B001F92E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +58,7 @@
 		609074A41CE3032B001F92E3 /* WebviewProgressBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebviewProgressBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		609074A81CE3032B001F92E3 /* WebviewProgressBarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebviewProgressBarUITests.m; sourceTree = "<group>"; };
 		609074AA1CE3032B001F92E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		609074BE1CE432D7001F92E3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				609074BF1CE432D7001F92E3 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +87,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60906A901CEC15B500ACBA2D /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				60906A911CEC15FF00ACBA2D /* HXWebView.h */,
+				60906A921CEC15FF00ACBA2D /* HXWebView.m */,
+				60906A931CEC15FF00ACBA2D /* NJKWebViewProgress.h */,
+				60906A941CEC15FF00ACBA2D /* NJKWebViewProgress.m */,
+			);
+			name = WebView;
+			sourceTree = "<group>";
+		};
 		609074771CE3032A001F92E3 = {
 			isa = PBXGroup;
 			children = (
+				609074BE1CE432D7001F92E3 /* WebKit.framework */,
 				609074821CE3032B001F92E3 /* WebviewProgressBar */,
 				6090749C1CE3032B001F92E3 /* WebviewProgressBarTests */,
 				609074A71CE3032B001F92E3 /* WebviewProgressBarUITests */,
@@ -101,6 +122,7 @@
 		609074821CE3032B001F92E3 /* WebviewProgressBar */ = {
 			isa = PBXGroup;
 			children = (
+				60906A901CEC15B500ACBA2D /* WebView */,
 				609074861CE3032B001F92E3 /* AppDelegate.h */,
 				609074871CE3032B001F92E3 /* AppDelegate.m */,
 				609074891CE3032B001F92E3 /* ViewController.h */,
@@ -270,9 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60906A961CEC15FF00ACBA2D /* NJKWebViewProgress.m in Sources */,
 				6090748B1CE3032B001F92E3 /* ViewController.m in Sources */,
 				609074881CE3032B001F92E3 /* AppDelegate.m in Sources */,
 				609074851CE3032B001F92E3 /* main.m in Sources */,
+				60906A951CEC15FF00ACBA2D /* HXWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WebviewProgressBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.blogof.ios.WebviewProgressBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WebviewProgressBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.blogof.ios.WebviewProgressBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +524,7 @@
 				609074AF1CE3032B001F92E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		609074B01CE3032B001F92E3 /* Build configuration list for PBXNativeTarget "WebviewProgressBarTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +533,7 @@
 				609074B21CE3032B001F92E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		609074B31CE3032B001F92E3 /* Build configuration list for PBXNativeTarget "WebviewProgressBarUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +542,7 @@
 				609074B51CE3032B001F92E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
