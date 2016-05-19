@@ -30,8 +30,14 @@
 
 
 - (void)viewDidLoad {
-
     [super viewDidLoad];
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTitle:nil
+                                                             andNoralImage:NavigationBackItemImageName
+                                                       andHighlightedImage:NavigationBackItemImageName
+                                                                    target:self
+                                                                    action:@selector(popViewClick)];
+    
     [self.view addSubview:self.webView];
     self.view.backgroundColor = [UIColor whiteColor];
     [self initProgress];
@@ -47,22 +53,24 @@
     self.progressView = [[UIProgressView alloc]initWithProgressViewStyle:UIProgressViewStyleDefault];
     self.progressView.frame = barFrame;
     self.progressView.backgroundColor = [UIColor clearColor];
-    self.progressView.tintColor = [UIColor blueColor];
     self.progressView.trackTintColor=[UIColor clearColor];
     self.progressView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-    [self.progressView setProgress:0 animated:YES];
+    [self.progressView setProgress:0 animated:NO];
 }
 
 #pragma mark hxwebview 的代理方法
 -(void)webViewDidFinishLoad:(HXWebView *)webView
 {
     self.title = self.webView.title;
+    if ([self.webView canGoBack]) {
+        
+    }
 }
 
 -(void)webView:(HXWebView *)webView updateProgress:(double)progress
 {
     if (progress>=1.f) {
-        [self.progressView setProgress:0.f animated:YES];
+        [self.progressView setProgress:0.f animated:NO];
     }else{
         [self.progressView setProgress:progress animated:YES];
     }
@@ -76,6 +84,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.navigationController.navigationBar addSubview:_progressView];
+    [self.navigationController.navigationBar bringSubviewToFront:_progressView];
+    self.navigationController.navigationBar.clipsToBounds = NO;
 }
 
 -(void)viewWillDisappear:(BOOL)animated

@@ -8,13 +8,16 @@
 
 #import "HXWebView.h"
 #import <WebKit/WebKit.h>
+#import "NJKWebViewProgress.h"
 
-@interface HXWebView()<UIWebViewDelegate,WKUIDelegate,WKNavigationDelegate>
+@interface HXWebView()<UIWebViewDelegate,WKUIDelegate,WKNavigationDelegate,NJKWebViewProgressDelegate>
 
 @property (nonatomic,assign) double estimatedProgress;
 @property (nonatomic,strong) NSURLRequest *originRequest;
 @property (nonatomic,strong) NSURLRequest *currentRequest;
 @property (nonatomic,assign) BOOL useUIWebView;
+
+@property (nonatomic, strong) NJKWebViewProgress* njkWebViewProgress;
 
 @end
 
@@ -59,7 +62,7 @@
         self.useUIWebView = YES;
         [self initUIWebView];
     }
-//    self.scalesPageToFit = YES;
+    //    self.scalesPageToFit = YES;
     
     [self.realWebView setFrame:self.bounds];
     [self.realWebView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
@@ -98,7 +101,10 @@
             subview.backgroundColor = [UIColor clearColor];
         }
     }
-    
+    self.njkWebViewProgress = [[NJKWebViewProgress alloc] init];
+    webView.delegate = _njkWebViewProgress;
+    _njkWebViewProgress.webViewProxyDelegate = self;
+    _njkWebViewProgress.progressDelegate = self;
     _realWebView = webView;
 }
 -(void)loadRequest:(NSURLRequest *)request
@@ -123,7 +129,7 @@
 - (nullable NSString *)stringByEvaluatingJavaScriptFromString:(NSString * _Nullable)script
 {
     if (self.useUIWebView) {
-       return [(UIWebView*)self.realWebView stringByEvaluatingJavaScriptFromString:script];
+        return [(UIWebView*)self.realWebView stringByEvaluatingJavaScriptFromString:script];
     }else{
         //如果是用wkwebview 来获取title 可以直接使用title属性
         if ([script isEqualToString:@"document.title"]) {
@@ -165,8 +171,6 @@
 
 -(void)goForward
 {
-//    [[[UIWebView alloc]init] ];
-//    [[[WKWebView alloc]init] ];
     [self.realWebView performSelector:@selector(goForward)];
 }
 
@@ -285,7 +289,10 @@
     }
     return resultBOOL;
 }
-
+-(UIScrollView *)scrollView
+{
+    return [(id)self.realWebView scrollView];
+}
 
 #pragma mark- 基础方法
 #pragma mark-  如果没有找到方法 去realWebView 中调用
@@ -321,12 +328,13 @@
     return retValue;
 }
 
-//WkWebView的进度条实现方法
+//WkWebView的progress 回调
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if([keyPath isEqualToString:@"estimatedProgress"])
     {
         self.estimatedProgress = [change[NSKeyValueChangeNewKey] doubleValue];
+        [self callback_webViewUpdateProgress:self.estimatedProgress];
     }
     else if([keyPath isEqualToString:@"title"])
     {
@@ -334,6 +342,44 @@
     }
 }
 
+//uiwebview的progress njk progress的代理方法
+-(void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress
+{
+    self.estimatedProgress = progress;
+    [self callback_webViewUpdateProgress:progress];
+    
+}
+- (void)callback_webViewUpdateProgress:(float)progress
+{
+    if([self.delegate respondsToSelector:@selector(webView:updateProgress:)])
+    {
+        [self.delegate webView:self updateProgress:progress];
+    }
+}
 
+#pragma mark- 清理
+-(void)dealloc
+{
+    if(_useUIWebView)
+    {
+        UIWebView* webView = _realWebView;
+        webView.delegate = nil;
+    }
+    else
+    {
+        WKWebView* webView = _realWebView;
+        webView.UIDelegate = nil;
+        webView.navigationDelegate = nil;
+        
+        [webView removeObserver:self forKeyPath:@"estimatedProgress"];
+        [webView removeObserver:self forKeyPath:@"title"];
+    }
+    [_realWebView scrollView].delegate = nil;
+    [_realWebView stopLoading];
+    [(UIWebView*)_realWebView loadHTMLString:@"" baseURL:nil];
+    [_realWebView stopLoading];
+    [_realWebView removeFromSuperview];
+    _realWebView = nil;
+}
 
 @end
