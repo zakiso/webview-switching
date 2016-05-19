@@ -12,6 +12,7 @@
 @interface ViewController ()<HXWebViewDelegate>
 @property (nonatomic, strong) UIProgressView *progressView;
 @property (nonatomic, strong) HXWebView *webView;
+@property (nonatomic, strong) UIBarButtonItem *backButton;
 
 @end
 
@@ -32,11 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTitle:nil
-                                                             andNoralImage:NavigationBackItemImageName
-                                                       andHighlightedImage:NavigationBackItemImageName
-                                                                    target:self
-                                                                    action:@selector(popViewClick)];
+    _backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
     
     [self.view addSubview:self.webView];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -58,12 +55,21 @@
     [self.progressView setProgress:0 animated:NO];
 }
 
+-(void)back
+{
+    if ([self.webView canGoBack]) {
+        [self.webView goBack];
+    }
+}
+
 #pragma mark hxwebview 的代理方法
 -(void)webViewDidFinishLoad:(HXWebView *)webView
 {
     self.title = self.webView.title;
     if ([self.webView canGoBack]) {
-        
+        self.navigationItem.leftBarButtonItem = _backButton;
+    }else{
+        self.navigationItem.leftBarButtonItem = nil;
     }
 }
 
