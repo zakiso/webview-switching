@@ -137,12 +137,16 @@
         }else{
             __block NSString *resultString = nil;
             [(WKWebView*)self.realWebView evaluateJavaScript:script completionHandler:^(id result, NSError *error) {
+                //在收到回调后需要将resultString设置为空字符串或者某个常量，否则这里会一直等待，影响体验
                 if (error == nil) {
                     if (result != nil) {
                         resultString = [NSString stringWithFormat:@"%@", result];
+                    }else{
+                        resultString = @"";
                     }
                 } else {
                     NSLog(@"evaluateJavaScript error : %@", error.localizedDescription);
+                    resultString = @"";
                 }
             }];
             while (resultString == nil)
@@ -156,37 +160,67 @@
 
 -(void)reload
 {
-    [self.realWebView performSelector:@selector(reload)];
+    if(self.useUIWebView){
+        [(UIWebView *)self.realWebView reload];
+    }else{
+        [(WKWebView *)self.realWebView reload];
+    }
 }
 
 -(void)stopLoading
 {
-    [self.realWebView performSelector:@selector(stopLoading)];
+    if(self.useUIWebView){
+        [(UIWebView *)self.realWebView stopLoading];
+    }else{
+        [(WKWebView *)self.realWebView stopLoading];
+    }
 }
 
 -(void)goBack
 {
-    [self.realWebView performSelector:@selector(goBack)];
+    if(self.useUIWebView){
+        [(UIWebView *)self.realWebView goBack];
+    }else{
+        [(WKWebView *)self.realWebView goBack];
+    }
 }
 
 -(void)goForward
 {
-    [self.realWebView performSelector:@selector(goForward)];
+    if(self.useUIWebView){
+        [(UIWebView *)self.realWebView goForward];
+    }else{
+        [(WKWebView *)self.realWebView goForward];
+    }
 }
 
 -(BOOL)canGoBack
 {
-    return [self.realWebView performSelector:@selector(canGoBack)];
+    if(self.useUIWebView){
+        return [(UIWebView *)self.realWebView canGoBack];
+    }else{
+        return [(WKWebView *)self.realWebView canGoBack];
+    }
+    //    id b = [self.realWebView performSelector:@selector(canGoBack)];//如果这样写会报错EXC_BAD_ACCESS
 }
 
 -(BOOL)canGoForward
 {
-    return [self.realWebView performSelector:@selector(canGoForward)];
+    if(self.useUIWebView){
+        return [(UIWebView *)self.realWebView canGoForward];
+    }else{
+        return [(WKWebView *)self.realWebView canGoForward];
+    }
 }
 
 -(BOOL)isLoading
 {
-    return [self.realWebView performSelector:@selector(isLoading)];
+    if(self.useUIWebView){
+        return [(UIWebView *)self.realWebView isLoading];
+    }else{
+        return [(WKWebView *)self.realWebView isLoading];
+    }
+    //    return [self.realWebView performSelector:@selector(isLoading)];//如果这样写，不管加不加载中都会返回YES
 }
 
 #pragma mark --> UIWebView的代理方法
@@ -291,7 +325,11 @@
 }
 -(UIScrollView *)scrollView
 {
-    return [(id)self.realWebView scrollView];
+    if(self.useUIWebView){
+        return [(UIWebView *)_realWebView scrollView];
+    }else{
+        return [(WKWebView *)_realWebView scrollView];
+    }
 }
 
 #pragma mark- 基础方法
@@ -362,22 +400,23 @@
 {
     if(_useUIWebView)
     {
-        UIWebView* webView = _realWebView;
+        UIWebView *webView = (UIWebView *)_realWebView;
         webView.delegate = nil;
+        webView.scrollView.delegate = nil;
+        [webView stopLoading];
+        [webView loadHTMLString:@"" baseURL:nil];
+        [webView stopLoading];
     }
     else
     {
-        WKWebView* webView = _realWebView;
+        WKWebView *webView = (WKWebView *)_realWebView;
         webView.UIDelegate = nil;
         webView.navigationDelegate = nil;
-        
+        webView.scrollView.delegate = nil;
+        [webView stopLoading];
         [webView removeObserver:self forKeyPath:@"estimatedProgress"];
         [webView removeObserver:self forKeyPath:@"title"];
     }
-    [_realWebView scrollView].delegate = nil;
-    [_realWebView stopLoading];
-    [(UIWebView*)_realWebView loadHTMLString:@"" baseURL:nil];
-    [_realWebView stopLoading];
     [_realWebView removeFromSuperview];
     _realWebView = nil;
 }
