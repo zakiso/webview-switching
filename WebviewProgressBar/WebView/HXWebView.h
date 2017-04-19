@@ -16,7 +16,7 @@
 @property(weak,nonatomic)_Nullable id<HXWebViewDelegate> delegate;
 
 ///内部使用的webView 如果有WKWebView则realWebView为WKWebView
-@property (nonatomic, readonly) id _Nullable realWebView;
+@property (nonatomic, readonly) UIView *_Nullable realWebView;
 //加载进度
 @property (nonatomic, readonly) double estimatedProgress;
 
